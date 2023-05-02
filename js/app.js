@@ -5,22 +5,6 @@ const breakpoints = {
     lg: 1024
 }
 
-fetch('https://picsum.photos/1080')
-    .then(response => response.json())
-    .then(data => {
-        // Do something with the returned JSON data
-        console.log(data);
-    })
-    .catch(error => {
-        // Handle any errors that occur during the request
-        console.error(error);
-    });
-
-async function getImg(index) {
-
-}
-
-
 const generateGrid = async (props) => {
     const container = document.querySelector(".container");
     container.style.gridTemplateColumns = `repeat(${props}, 1fr)`;
@@ -42,7 +26,6 @@ const generateGrid = async (props) => {
             container.appendChild(pic);
         }
     }
-
 }
 
 const deviceWidth = window.innerWidth;
