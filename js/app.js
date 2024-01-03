@@ -9,7 +9,7 @@ const generateGrid = async (props) => {
     const container = document.querySelector(".container");
     container.style.gridTemplateColumns = `repeat(${props}, 1fr)`;
     // const randomPics = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
-    const randomPics = 6;
+    const randomPics = 84;
     if (!document.querySelector(".pic")) {
         for (let i = 1; i < randomPics; i++) {
             const min = 1080;
