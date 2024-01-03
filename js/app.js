@@ -21,7 +21,7 @@ const generateGrid = async (props) => {
             pic.style.height = `${rand / 2}px`;
             pic.style.gridRowEnd = `span ${Math.ceil(rand / 5)}`;
             const img = document.createElement("img");
-            const response = await fetch(`https://res.cloudinary.com/dxqtfuspw/image/upload/${randomPics}.jpg`);
+            const response = await fetch(`https://res.cloudinary.com/dxqtfuspw/image/upload/${i}.jpg`);
             img.src = response.url;
             img.style.height = `${rand / 2}px`;
 
