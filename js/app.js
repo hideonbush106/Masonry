@@ -20,7 +20,7 @@ const generateGrid = async (props) => {
             pic.style.height = `${rand / 2}px`;
             pic.style.gridRowEnd = `span ${Math.ceil(rand / 5)}`;
             const img = document.createElement("img");
-            const response = await fetch(`https://picsum.photos/1080/`);
+            const response = await fetch(`https://source.unsplash.com/random`);
             img.src = response.url;
             img.style.height = `${rand / 2}px`;
 
