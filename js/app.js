@@ -8,7 +8,8 @@ const breakpoints = {
 const generateGrid = async (props) => {
     const container = document.querySelector(".container");
     container.style.gridTemplateColumns = `repeat(${props}, 1fr)`;
-    const randomPics = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
+    // const randomPics = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
+    const randomPics = 6;
     if (!document.querySelector(".pic")) {
         for (let i = 1; i < randomPics; i++) {
             const min = 1080;
@@ -20,7 +21,7 @@ const generateGrid = async (props) => {
             pic.style.height = `${rand / 2}px`;
             pic.style.gridRowEnd = `span ${Math.ceil(rand / 5)}`;
             const img = document.createElement("img");
-            const response = await fetch(`https://source.unsplash.com/random`);
+            const response = await fetch(`https://res.cloudinary.com/dxqtfuspw/image/upload/${randomPics}.jpg`);
             img.src = response.url;
             img.style.height = `${rand / 2}px`;
 
